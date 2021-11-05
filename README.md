@@ -8,7 +8,7 @@ This repo is created to show subjects below:
 * **Behave** framework for behaviour driven development.
 
 
-With **[PyCharm]** you could run your rbot code with robot command.
+With **[PyCharm]** you could run your code.
 
 
 [Pyhton]: https://www.python.org/
