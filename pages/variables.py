@@ -1,4 +1,8 @@
 class Variables:
+    """
+        This class is for the variables which are related with the web elements
+        based on id, css, xpath or other selectors.
+    """
     # Search Page Variables
     search_bar_xpath = "//input[@class='gLFyf gsfi']"
     search_btn_xpath = "//div[@class='FPdoLc lJ9FBc']//input[@class='gNO89b']"
