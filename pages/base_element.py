@@ -1,9 +1,15 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+__author__ = "Mehmet Engin Sacan"
+
 
 class BaseElement:
 
+    """
+        This class contains the web element properties such as location and
+        which kind of selector could be used to get them.
+    """
     def __init__(self, driver, by, value):
         self.driver = driver
         self.value = value
