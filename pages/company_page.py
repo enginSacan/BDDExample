@@ -7,7 +7,14 @@ from hamcrest import assert_that, equal_to
 
 
 class CompanyPage(BasePage):
+    """
+        This class is created for the company page elements and actions for ui tests
+        Properties are defined for the elements in the page and each property waiting
+        element could be clickable or visible
 
+        Methods ,which start with check, are the assertion functions
+        Method starts with click contain click actions
+    """
     @property
     def company_logo(self):
         locator = (By.XPATH, Variables.company_logo_xpath)
