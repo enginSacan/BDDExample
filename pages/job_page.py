@@ -12,6 +12,11 @@ from pages.variables import Variables
 
 
 class JobPage(BasePage):
+    """
+        This class is created for the job page elements and actions for ui tests
+        Properties are defined for the elements in the page and each property waiting
+        element could be clickable or visible
+    """
     @property
     def apply_title(self):
         locator = (By.XPATH, Variables.apply_title_xpath)
@@ -78,6 +83,9 @@ class JobPage(BasePage):
         return BaseElement(self.driver, locator[0], locator[1])
 
     def check_error_messages(self):
+        """
+            This method is asserting the error messages related with the application form for job.
+        """
         assert_that(self.apply_title.text, equal_to("Başvuru Formu"))
         time.sleep(1)
         self.submit_button.click()
@@ -88,6 +96,9 @@ class JobPage(BasePage):
         assert_that(self.error_captcha.text, equal_to("Lütfen recaptcha doğrulamasını yapınız."))
 
     def fill_all_form(self):
+        """
+            This method is asserting that uploading resume of the user works fine.
+        """
         self.surname_field.input_text(Variables.surname)
         self.email_field.input_text(Variables.email)
         self.driver.find_element_by_id(Variables.file_upload_id).send_keys("C:\\Users\\z003f2nt\\Downloads\\CV.pdf")
