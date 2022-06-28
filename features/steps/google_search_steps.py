@@ -1,5 +1,11 @@
 from behave import given, when, then
 
+__author__ = "Mehmet Engin Sacan"
+
+"""
+This file contains the step definition functions
+"""
+
 
 @given("Open page {url}")
 def open_main_page(context, url):
